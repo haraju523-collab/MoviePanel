@@ -49,9 +49,6 @@ class TeraBoxPlayerActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         
-        // Initialize DownloadManager
-        DownloadManager.init(this)
-        
         // Get URL from intent - support both explicit URL extra and deep link
         val teraBoxUrl = when {
             // Check for explicit URL extra (from app navigation)

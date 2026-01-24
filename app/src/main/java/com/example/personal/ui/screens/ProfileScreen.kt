@@ -32,6 +32,12 @@ import androidx.compose.ui.unit.sp
 import com.example.personal.data.SiteRepository
 import com.example.personal.ui.theme.*
 import com.example.personal.utils.ShareUtils
+import com.example.personal.utils.UpdateManager
+import androidx.core.content.FileProvider
+import java.io.File
+import com.example.personal.ui.components.UpdateDialog
+import com.example.personal.download.DownloadManager
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,6 +59,13 @@ fun ProfileScreen() {
     var showThemeDialog by remember { mutableStateOf(false) }
     var showDownloadLocationDialog by remember { mutableStateOf(false) }
     var showViewModeDialog by remember { mutableStateOf(false) }
+    
+    // Update Checker State
+    val scope = rememberCoroutineScope()
+    var updateInfo by remember { mutableStateOf<UpdateManager.UpdateInfo?>(null) }
+    var isCheckingUpdate by remember { mutableStateOf(false) }
+    var isUpdateDownloading by remember { mutableStateOf(false) }
+    var updateProgress by remember { mutableStateOf(0f) }
     
     // Calculate stats (mock data for ads blocked and time saved)
     val adsBlocked = remember(allSites.size) { (allSites.size * 150).toString() }
@@ -245,8 +258,42 @@ fun ProfileScreen() {
                         MinimalSettingItem(
                             icon = Icons.Default.Info,
                             title = "Version",
-                            subtitle = "1.0.0",
-                            onClick = { showToast("MoviePanel v1.0.0") }
+                            subtitle = "1.0",
+                            onClick = { 
+                                if (!isCheckingUpdate) {
+                                    isCheckingUpdate = true
+                                    showToast("Checking for updates...")
+                                    scope.launch {
+                                        val info = UpdateManager.checkForUpdates()
+                                        isCheckingUpdate = false
+                                        if (info != null) {
+                                            updateInfo = info
+                                        } else {
+                                            showToast("You are up to date! ✅")
+                                        }
+                                    }
+                                }
+                            }
+                        ),
+                        MinimalSettingItem(
+                            icon = Icons.Default.SystemUpdate,
+                            title = "Check for Updates",
+                            subtitle = if (isCheckingUpdate) "Checking..." else "Tap to check",
+                            onClick = {
+                                if (!isCheckingUpdate) {
+                                    isCheckingUpdate = true
+                                    showToast("Checking for updates...")
+                                    scope.launch {
+                                        val info = UpdateManager.checkForUpdates()
+                                        isCheckingUpdate = false
+                                        if (info != null) {
+                                            updateInfo = info
+                                        } else {
+                                            showToast("You are up to date! ✅")
+                                        }
+                                    }
+                                }
+                            }
                         ),
                         MinimalSettingItem(
                             icon = Icons.Default.Star,
@@ -310,6 +357,77 @@ fun ProfileScreen() {
                     com.example.personal.data.PreferencesManager.setDefaultViewMode(mode)
                     showViewModeDialog = false
                     showToast("Default view: ${mode.name.replaceFirstChar { it.uppercaseChar() }}")
+                }
+            )
+        }
+        
+        // Update Dialog
+        updateInfo?.let { info ->
+            UpdateDialog(
+                updateInfo = info,
+                isDownloading = isUpdateDownloading,
+                downloadProgress = updateProgress,
+                onUpdate = {
+                     try {
+                        isUpdateDownloading = true
+                        updateProgress = 0f
+                        
+                        // Set up callbacks
+                        DownloadManager.onDownloadProgress = { item ->
+                            if (item.url == info.downloadUrl) {
+                                val progress = if (item.fileSize > 0) item.downloadedSize.toFloat() / item.fileSize.toFloat() else 0f
+                                updateProgress = progress
+                            }
+                        }
+                        
+                        DownloadManager.onDownloadComplete = { item ->
+                            if (item.url == info.downloadUrl) {
+                                isUpdateDownloading = false
+                                updateInfo = null
+                                val file = File(item.filePath)
+                                if (file.exists()) {
+                                    try {
+                                        val uri = FileProvider.getUriForFile(
+                                            context,
+                                            "${context.packageName}.fileprovider",
+                                            file
+                                        )
+                                        val intent = Intent(Intent.ACTION_VIEW).apply {
+                                            setDataAndType(uri, "application/vnd.android.package-archive")
+                                            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        }
+                                        context.startActivity(intent)
+                                    } catch (e: Exception) {
+                                        showToast("Error launching installer: ${e.message}")
+                                    }
+                                } else {
+                                    showToast("Update file not found")
+                                }
+                            }
+                        }
+
+                        DownloadManager.onDownloadFailed = { item, error ->
+                            if (item.url == info.downloadUrl) {
+                                isUpdateDownloading = false
+                                showToast("Update failed: $error")
+                            }
+                        }
+
+                        DownloadManager.startDownload(
+                            url = info.downloadUrl,
+                            fileName = "MoviePanel_v${info.versionName}.apk",
+                            mimeType = "application/vnd.android.package-archive"
+                        )
+                    } catch (e: Exception) {
+                        isUpdateDownloading = false
+                        showToast("Failed to start download: ${e.message}")
+                    }
+                },
+                onDismiss = { 
+                    if (!isUpdateDownloading) {
+                        updateInfo = null 
+                    }
                 }
             )
         }

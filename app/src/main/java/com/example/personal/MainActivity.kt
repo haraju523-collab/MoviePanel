@@ -28,8 +28,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import com.example.personal.utils.UpdateManager
-import com.example.personal.ui.components.UpdateDialog
 import com.example.personal.download.DownloadManager
 import android.widget.Toast
 
@@ -46,18 +44,6 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             MoviePanelTheme {
-                var updateInfo by remember { mutableStateOf<UpdateManager.UpdateInfo?>(null) }
-                
-                // Check for updates on launch
-                LaunchedEffect(Unit) {
-                    launch {
-                        val info = UpdateManager.checkForUpdates()
-                        if (info != null) {
-                            updateInfo = info
-                        }
-                    }
-                }
-                
                 SplashScreen(
                     onComplete = {
                         val intent = Intent(this, WebsiteListActivity::class.java)
@@ -65,18 +51,6 @@ class MainActivity : ComponentActivity() {
                         finish()
                     }
                 )
-                
-                // Show Update Dialog if available
-                updateInfo?.let { info ->
-                    UpdateDialog(
-                        updateInfo = info,
-                        onUpdate = {
-                            startUpdateDownload(info.downloadUrl, info.versionName)
-                            updateInfo = null
-                        },
-                        onDismiss = { updateInfo = null }
-                    )
-                }
             }
         }
     }

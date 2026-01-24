@@ -26,6 +26,7 @@ sealed class Screen(val route: String, val title: String, val icon: androidx.com
     object Browser : Screen("browser", "Browser", Icons.Default.Public)
     object Downloads : Screen("downloads", "Downloads", Icons.Default.Download)
     object Favorites : Screen("favorites", "Favorites", Icons.Default.Favorite)
+    object Profile : Screen("profile", "Profile", Icons.Default.Person)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -120,6 +121,9 @@ fun MainNavigation() {
                     onNavigateToDownloads = {
                         selectedScreen = Screen.Downloads
                     },
+                    onNavigateToProfile = {
+                        selectedScreen = Screen.Profile
+                    },
                     onNavigateToExplore = {
                         // Removed explore
                     }
@@ -139,6 +143,7 @@ fun MainNavigation() {
                     }
                 }
                 is Screen.Favorites -> FavoritesScreen()
+                is Screen.Profile -> ProfileScreen()
             }
         }
     }

@@ -53,6 +53,7 @@ enum class ViewMode { GRID, LIST }
 @Composable
 fun HomeScreen(
     onNavigateToDownloads: () -> Unit,
+    onNavigateToProfile: () -> Unit,
     onNavigateToExplore: (() -> Unit)? = null
 ) {
     val context = LocalContext.current
@@ -97,6 +98,21 @@ fun HomeScreen(
                         )
                     )
             ) {
+                // Profile Button overlay
+                IconButton(
+                    onClick = onNavigateToProfile,
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(16.dp)
+                        .background(DarkCard.copy(alpha = 0.5f), CircleShape)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Person,
+                        contentDescription = "Profile",
+                        tint = TextPrimary
+                    )
+                }
+
                 // Hero content overlay
                 Column(
                     modifier = Modifier

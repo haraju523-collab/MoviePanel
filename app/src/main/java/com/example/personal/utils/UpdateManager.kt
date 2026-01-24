@@ -35,7 +35,7 @@ object UpdateManager {
 
     suspend fun checkForUpdates(): UpdateInfo? = withContext(Dispatchers.IO) {
         try {
-            val url = URL(UPDATE_JSON_URL)
+            val url = URL("$UPDATE_JSON_URL?t=${System.currentTimeMillis()}")
             val connection = url.openConnection() as HttpsURLConnection
             connection.requestMethod = "GET"
             connection.connectTimeout = 5000

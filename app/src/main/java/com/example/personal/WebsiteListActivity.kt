@@ -60,7 +60,6 @@ class WebsiteListActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-        SiteRepository.init(this)
         
         setContent {
             MoviePanelTheme {
