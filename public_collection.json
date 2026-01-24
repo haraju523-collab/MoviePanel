@@ -1,32 +1,452 @@
 [
-  {
-    "id": "1",
-    "name": "Big Buck Bunny",
-    "description": "A large and lovable rabbit deals with three tiny bullies, led by a flying squirrel, who are determined to squelch his happiness.",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/800px-Big_buck_bunny_poster_big.jpg",
-    "media_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    "download_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    "type": "movie",
-    "year": "2008"
-  },
-  {
-    "id": "2",
-    "name": "Elephant Dream",
-    "description": "The world's first open movie, made entirely with open source graphics software such as Blender, and with all production files freely available to use.",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Elephants_Dream_poster_HO.jpg/800px-Elephants_Dream_poster_HO.jpg",
-    "media_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    "download_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    "type": "movie",
-    "year": "2006"
-  },
-  {
-    "id": "3",
-    "name": " Border 2 (2026) Hindi Full Movie",
-    "year": "2026",
-    "type": "movie",
-    "description": "Young Indian fighters are prepared to protect their homeland from a greater threat during the 1971 Indo-Pak war.",
-    "poster_url": "https://pix1.b442d6eefbd6173bad7ee5bde6cd31e8.com/download/82a65d58aa819d25a1b8745bc69bc1ce/filmy4cab+wapkizs+com/Border-2-2026-Hindi-Full-Movie-(filmycab.casa).jpg",
-    "media_url": "https://linkmake.in/view3/9o3O5NWJom",
-    "download_url": "https://linkmake.in/view3/9o3O5NWJom"
-  }
+    {
+        "id": "1",
+        "name": "Scam 1992: The Harshad Mehta Story",
+        "description": "The story of Harshad Mehta, a stockbroker who took the Indian stock market to dizzying heights and his catastrophic downfall.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjc1NmVlMGItOTk0ZC00YzgxLTk1ODctYzNhMzY2NjkxMzIzXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 9.3
+    },
+    {
+        "id": "2",
+        "name": "Aspirants",
+        "description": "Three friends navigate the grueling UPSC civil services examination while balancing dreams, relationships, and reality.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjMyMDcwMTI4MV5BMl5BanBnXkFtZTgwMTg4MTIwNzI@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 9.2
+    },
+    {
+        "id": "3",
+        "name": "Gullak",
+        "description": "A heartwarming story of a middle-class family in small-town India, their everyday struggles and simple joys.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMGU3MTY4ZTItYjRlZC00ZDRjLWI4OWMtNzQ1YzZlZGNhOGRmXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 9.1
+    },
+    {
+        "id": "4",
+        "name": "Kota Factory",
+        "description": "India's first 'Black and White' show captures the struggles of IIT aspirants in Kota, Rajasthan.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjM1NjA3Mjc3N15BMl5BanBnXkFtZTgwMzQxNTE3NzM@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 9.1
+    },
+    {
+        "id": "5",
+        "name": "TVF Pitchers",
+        "description": "Four friends quit their corporate jobs to pursue their dream of launching a startup.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMTQ0MDAzNjQtYjVhYy00MWU2LTgzMGMtOWJkYzk4YTIxMzQ0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2015",
+        "rating": 9.0
+    },
+    {
+        "id": "6",
+        "name": "Panchayat",
+        "description": "An engineering graduate reluctantly takes up a government job as a Panchayat secretary in a remote village.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjk1ZWNmNWYtNDU4Yi00YjI0LTg4NzMtNWEwMjFlZDE3YWIyXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 9.0
+    },
+    {
+        "id": "7",
+        "name": "Rocket Boys",
+        "description": "The story of two legendary scientists Vikram Sarabhai and Homi J. Bhabha who built India's space and nuclear programs.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMWI2MmIxYzEtMzhiMi00NGZkLWIyNzMtODljMDdhNDZhYTViXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2022",
+        "rating": 8.9
+    },
+    {
+        "id": "8",
+        "name": "Flames",
+        "description": "A cute love story set in a coaching center depicting the innocence of teenage romance.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BOGZlNTNjNGUtYWEzYS00MTgxLWFlNzktYzY2NGFmNTI5YTVjXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.9
+    },
+    {
+        "id": "9",
+        "name": "NCR Days",
+        "description": "A coming-of-age story about college students exploring life in the NCR region.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BN2IyMDQ4NjUtYjFhMy00N2M2LWIzZjEtYmFmZDU3Y2ZhOTg0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 8.9
+    },
+    {
+        "id": "10",
+        "name": "Dhindora",
+        "description": "A comedy series featuring Bhuvan Bam playing multiple characters from his universe dealing with everyday chaos.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjM0MTI4Mjg0N15BMl5BanBnXkFtZTgwMjc0NjI5NzM@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 8.8
+    },
+    {
+        "id": "11",
+        "name": "The Family Man",
+        "description": "A middle-class man secretly working as an intelligence officer for a special cell of the NIA.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMzRjZWVmMzItNTdmYS00OWEzLTgyOGUtNThiNzIxMjRmYWM3XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 8.7
+    },
+    {
+        "id": "12",
+        "name": "Farzi",
+        "description": "A con artist and a fiery task force officer find themselves entangled in a high-stakes game of counterfeiting.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BOTgzMGRjNGMtMjAwMS00YjlmLTk4YmYtYmVjNGIyMDZlYzYyXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2023",
+        "rating": 8.7
+    },
+    {
+        "id": "13",
+        "name": "Sacred Games",
+        "description": "A link in a chain of unsolved murders leads an honest cop to a tangled web of crime, corruption and danger.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjJlMjJlMzYtNmU5Yy00N2MwLTljMGUtMjdhOTczNGE4NWI0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.6
+    },
+    {
+        "id": "14",
+        "name": "Special OPS",
+        "description": "A RAW officer's 19-year manhunt for a mastermind behind major terror attacks in India.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNDRhNjk3ODAtMzRlZS00YWFiLWEwYzktZjk5NjNlMTM1NTcxXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 8.6
+    },
+    {
+        "id": "15",
+        "name": "ImMature",
+        "description": "A coming-of-age story following a teenage boy's quest to find a girlfriend.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNDVhYTM5MjUtY2M4Zi00YmViLTllNDYtMTYyNDkwMGE4OTVhXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.6
+    },
+    {
+        "id": "16",
+        "name": "Mirzapur",
+        "description": "A shocking incident at a wedding devastates a family and brings them into the orbit of a ruthless criminal empire.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYjNlNGJhN2YtNWIyNS00ZTljLTg4ZTQtNGNiMzM2OGFjYjMxXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.5
+    },
+    {
+        "id": "17",
+        "name": "Delhi Crime",
+        "description": "Based on the infamous 2012 Delhi gang rape, follows the investigation led by Deputy Commissioner of Police.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZTQxNjQ1NjQtMGE0NS00NTM2LWIxNTAtZjI0MDE0ZjNhNjcxXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 8.5
+    },
+    {
+        "id": "18",
+        "name": "Asur: Welcome to Your Dark Side",
+        "description": "A forensic expert and a judicial officer join forces to track a psychopathic serial killer.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZDgzMWNmMWQtZmViZi00ZTM0LTljMTQtMTI4YzQ5ZDhmNmIwXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 8.5
+    },
+    {
+        "id": "19",
+        "name": "College Romance",
+        "description": "Three friends navigate love, friendship and college life in this light-hearted comedy series.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNDhhNzQ4ZGUtYTFkZi00YzcxLWJlMTQtNGFhNzRmNjRhYWQ4XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.4
+    },
+    {
+        "id": "20",
+        "name": "Apharan",
+        "description": "A suspended inspector gets caught in a web of crime after agreeing to kidnap a young woman.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYmM2MDI3MTktMGI1Ny00ZjFiLWI0OGMtYjQxZGUzY2Q2MjM0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.4
+    },
+    {
+        "id": "21",
+        "name": "Broken But Beautiful",
+        "description": "Two heartbroken strangers meet and slowly develop feelings for each other.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMDU0NzU5YjUtNjgwMS00YjQ5LWJkMTYtYzE2NWM4ZDhiNGExXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.4
+    },
+    {
+        "id": "22",
+        "name": "Yeh Meri Family",
+        "description": "A nostalgic look at a middle-class family in the 1990s through the eyes of a 12-year-old.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjFiNTQ5ZDEtMmE1Ni00YWM5LWJmOGUtMDI5MzEzN2MxNzg4XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.4
+    },
+    {
+        "id": "23",
+        "name": "Paatal Lok",
+        "description": "A downtrodden Delhi cop lands a high-profile case and enters the dark realm of Paatal Lok.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BY2RjZmJlMjQtMjc5YS00MTVjLTk2MTktNDY4MWQzMGMwYjdlXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 8.2
+    },
+    {
+        "id": "24",
+        "name": "Chacha Vidhayak Hain Humare",
+        "description": "A young man navigates life pretending that his uncle is an influential politician.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNmFjNmUyMGEtMWY5Yi00NWFjLWFkZmItNjUxNWZhNTBjZTQ4XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 8.2
+    },
+    {
+        "id": "25",
+        "name": "Little Things",
+        "description": "A cohabiting couple in their 20s navigate through daily quirks of modern relationships.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BODY1ZDBmYTgtNWU2ZS00ZDQ2LWI2M2QtY2FlZjEyODEwNGNlXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2016",
+        "rating": 8.2
+    },
+    {
+        "id": "26",
+        "name": "Made in Heaven",
+        "description": "Two wedding planners in Delhi navigate the tricky world of big fat Indian weddings.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYWY1NTg4ZDgtNDMyYy00OGEzLWE0MTYtNmQ5MTA4MjM3MmU3XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 8.2
+    },
+    {
+        "id": "27",
+        "name": "Taaza Khabar",
+        "description": "A sanitation worker gets the power to see the future and tries to change his destiny.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZWI0OGEyYzUtNDRiYy00NThmLTk3OWItMWJjZDNlOWRjYmYxXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2023",
+        "rating": 8.1
+    },
+    {
+        "id": "28",
+        "name": "Criminal Justice",
+        "description": "A young man becomes the prime suspect in a murder investigation after a night out goes wrong.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjJmNThiZjYtMzFkNy00NWUxLWE1NjItMWE5NGUxNjUxY2EzXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 8.0
+    },
+    {
+        "id": "29",
+        "name": "Undekhi",
+        "description": "A wedding witness to a crime must navigate a deadly game of survival.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNDQ3YTg3YzItNjEwNy00ODliLWE4NzItYTcwYmQ3NjJhYjQxXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 8.0
+    },
+    {
+        "id": "30",
+        "name": "Hostel Daze",
+        "description": "A coming-of-age story about engineering students navigating hostel life.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZTVjMWZlODItNzk3Zi00YmFhLTk3MTYtNDM0OTBkZjdmZWM3XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 8.0
+    },
+    {
+        "id": "31",
+        "name": "Inside Edge",
+        "description": "A behind-the-scenes look at the world of cricket, corruption, and controversies.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMGUzMjM4YmUtM2U3ZS00YjJiLTk2ZjQtMjhjNWIzYWIxYmFiXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2017",
+        "rating": 8.0
+    },
+    {
+        "id": "32",
+        "name": "Mumbai Diaries 26/11",
+        "description": "Medical staff at a government hospital deal with the aftermath of the 2008 Mumbai attacks.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjA3ZDgzMjczNl5BMl5BanBnXkFtZTgwMDI1NDc5NDM@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 8.0
+    },
+    {
+        "id": "33",
+        "name": "Maamla Legal Hai",
+        "description": "A comedy set in the Patparganj District Court following quirky lawyers and their cases.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMTk4MzMxMDA0MV5BMl5BanBnXkFtZTgwMjk0MTg5NDM@._V1_.jpg",
+        "type": "series",
+        "year": "2024",
+        "rating": 8.0
+    },
+    {
+        "id": "34",
+        "name": "Maharani",
+        "description": "An illiterate housewife is thrust into the world of politics after her husband names her as Chief Minister.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZTE1MmNjM2MtMWE4Yi00MzI3LWJhMzQtNTdiMmMxNDJhOTA1XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 7.9
+    },
+    {
+        "id": "35",
+        "name": "Aarya",
+        "description": "A mother takes over her husband's drug business to protect her family from powerful enemies.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjQ1ZmI0YjQtYTJiMC00OTMzLTg4M2MtNjU4NjI5NDQ0YjFlXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 7.9
+    },
+    {
+        "id": "36",
+        "name": "Abhay",
+        "description": "An investigating officer tackles horrifying criminal cases in this crime thriller.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNzRjNjY1NjMtNzRjOC00ZmZkLTkzOWYtMGNhMjZhNzM3OTk4XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2019",
+        "rating": 7.9
+    },
+    {
+        "id": "37",
+        "name": "Bicchoo Ka Khel",
+        "description": "A man takes revenge on those who wronged his family using his clever schemes.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYzYzYzY2YjItNDg0MS00MTExLTg3NmMtOGMxZjI0NmU0YmFmXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 7.9
+    },
+    {
+        "id": "38",
+        "name": "Gyaarah Gyaarah",
+        "description": "A fantasy thriller inspired by Signal where cops from different timelines connect through a walkie-talkie.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZjc4ZTQ5MTEtMjU1Mi00OTRlLTlmYTQtMjRkOGNlMGI5MzlkXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2024",
+        "rating": 8.2
+    },
+    {
+        "id": "39",
+        "name": "Rangbaaz",
+        "description": "The rise and fall of a notorious gangster from Gorakhpur, based on real events.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjM3NDIyNjQ4M15BMl5BanBnXkFtZTgwMzY1MjU5NzM@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 7.8
+    },
+    {
+        "id": "40",
+        "name": "Bandish Bandits",
+        "description": "A classical singer and a pop star from different musical worlds fall for each other.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjc3MTU1YzEtZmM3MS00NmI1LWIyZTgtMTk5NWM4ZGFhZGI0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 7.8
+    },
+    {
+        "id": "41",
+        "name": "Aranyak",
+        "description": "A local cop joins forces with a city detective to solve a mysterious murder in the Sirona Hills.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZDdkNTk1OTUtZTc1ZS00YjMwLTgxZDUtMDc4MzQ3NWRlOTc1XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 7.8
+    },
+    {
+        "id": "42",
+        "name": "Sunflower",
+        "description": "A quirky murder mystery set in a housing society where everyone is a suspect.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYjZmMGI5NjgtYjFlNC00NzM4LTljNzctNjMxY2RiNThhODdhXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 7.8
+    },
+    {
+        "id": "43",
+        "name": "Shekhar Home",
+        "description": "A detective series featuring a brilliant but eccentric investigator solving complex cases.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMGQ1ZjVlNmMtZmI3ZC00NDI2LWFlMGMtNjRmMGIxNDhhNDJlXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2024",
+        "rating": 7.9
+    },
+    {
+        "id": "44",
+        "name": "Breathe",
+        "description": "A father will go to any lengths, including murder, to save his dying son.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BOGEzOTMyMja1Nl5BMl5BanBnXkFtZTgwMjYxNTE5NDM@._V1_.jpg",
+        "type": "series",
+        "year": "2018",
+        "rating": 7.6
+    },
+    {
+        "id": "45",
+        "name": "The Night Manager",
+        "description": "A former soldier infiltrates the inner circle of an illegal arms dealer.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BNjQ1YjQwNzYtNWY5Ny00MjNhLTlhMjgtNjUxNjMxZjkxNDJhXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2023",
+        "rating": 7.6
+    },
+    {
+        "id": "46",
+        "name": "Candy",
+        "description": "A murder in a small town leads to investigation of dark secrets and supernatural elements.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMzk4NWM2MmItZjM0MC00NWI5LWJmZmUtMTQ2YzExNWNmNjViXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 7.6
+    },
+    {
+        "id": "47",
+        "name": "Murder in Mahim",
+        "description": "A journalist and cop investigate murders targeting young men in Mumbai's LGBTQ community.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjM0OTQ2OTE2Ml5BMl5BanBnXkFtZTgwMjcyMDIyMzI@._V1_.jpg",
+        "type": "series",
+        "year": "2024",
+        "rating": 7.5
+    },
+    {
+        "id": "48",
+        "name": "Jamtara: Sabka Number Ayega",
+        "description": "Young men in Jamtara run a phishing operation that brings them into conflict with police and politicians.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BZDI4ZGMwMGQtMzU3Yi00MDE1LThjMTQtY2JjOGRkNjk5Y2YwXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2020",
+        "rating": 7.3
+    },
+    {
+        "id": "49",
+        "name": "Ray",
+        "description": "Anthology series of four stories inspired by the works of Satyajit Ray.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMDMzM2JjYzctNGNkNi00NzQ3LWIwZWEtNDhhNDA0OWE0MTg0XkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2021",
+        "rating": 7.1
+    },
+    {
+        "id": "50",
+        "name": "Dahan: Raakan Ka Rahasya",
+        "description": "An IAS officer investigates mysterious events in a village with supernatural connections.",
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BMjE2OGUxMjQtNGEwYS00NmViLWI1NDctZTIzMjU3ZTgxMTdiXkEyXkFqcGc@._V1_.jpg",
+        "type": "series",
+        "year": "2022",
+        "rating": 7.1
+    }
 ]
