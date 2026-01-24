@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- App-specific external Downloads directory (used by DownloadManager) -->
+    <external-files-path name="app_downloads" path="." />
+
+    <!-- Legacy paths kept for compatibility if needed -->
+    <external-path name="downloads" path="Download/MoviePanel" />
+    <external-path name="external" path="." />
+
+    <cache-path name="cache" path="." />
+</paths>

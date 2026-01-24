@@ -1,0 +1,276 @@
+# Ad/Tracker Domain Blocklist
+# MoviePanel Enhanced AdBlock Rules - Comprehensive List
+# Last updated: January 2026
+
+# ==========================================
+# MAJOR AD NETWORKS
+# ==========================================
+doubleclick.net
+googlesyndication.com
+googleadservices.com
+adservice.google.com
+pagead2.googlesyndication.com
+ads.google.com
+adsense.google.com
+adwords.google.com
+ads.yahoo.com
+advertising.com
+adnxs.com
+adsrvr.org
+adcolony.com
+mopub.com
+applovin.com
+unity3d.com/ads
+unityads.unity3d.com
+chartboost.com
+vungle.com
+ironsrc.com
+tapjoy.com
+inmobi.com
+admob.com
+fyber.com
+smaato.com
+adtilt.com
+adform.net
+adsymptotic.com
+adtheorent.com
+liftoff.io
+moloco.com
+
+# ==========================================
+# POPUP & POPUNDER NETWORKS
+# ==========================================
+popads.net
+popcash.net
+popunder.net
+propellerads.com
+trafficjunky.com
+exoclick.com
+juicyads.com
+adsterra.com
+revenuehits.com
+hilltopads.com
+clickadu.com
+clickaine.com
+popmyads.com
+adcash.com
+trafficforce.com
+trafficfactory.biz
+ero-advertising.com
+plugrush.com
+traffichunt.com
+reporo.net
+clicksor.com
+adfox.ru
+adfront.org
+
+# ==========================================
+# TRACKING & ANALYTICS
+# ==========================================
+google-analytics.com
+analytics.google.com
+stats.g.doubleclick.net
+facebook.net/tr
+connect.facebook.net
+pixel.facebook.com
+hotjar.com
+mixpanel.com
+segment.com
+amplitude.com
+branch.io
+appsflyer.com
+adjust.com
+kochava.com
+singular.net
+heap.io
+kissmetrics.com
+crazyegg.com
+fullstory.com
+mouseflow.com
+luckyorange.com
+loggly.com
+smartlook.com
+inspectlet.com
+clicktale.net
+
+# ==========================================
+# RETARGETING NETWORKS
+# ==========================================
+criteo.com
+criteo.net
+adroll.com
+media.net
+retargetlinks.com
+steelhousemedia.com
+perfectaudience.com
+adgear.com
+adskeeper.co.uk
+mgid.com
+taboola.com
+outbrain.com
+revcontent.com
+content.ad
+zergnet.com
+ligatus.com
+plista.com
+engageya.com
+dianomi.com
+
+# ==========================================
+# SOCIAL MEDIA TRACKING
+# ==========================================
+ads.twitter.com
+analytics.twitter.com
+ads.linkedin.com
+snap.licdn.com
+ads.pinterest.com
+ads.tiktok.com
+analytics.tiktok.com
+ads.snapchat.com
+sc-static.net/scevent
+
+# ==========================================
+# VIDEO AD NETWORKS
+# ==========================================
+springserve.com
+spotxchange.com
+spotx.tv
+freewheel.tv
+innovid.com
+tremor.com
+telaria.com
+teads.tv
+unrulymedia.com
+viralize.tv
+connatix.com
+cedato.com
+vi.ai
+primis.tech
+
+# ==========================================
+# OVERLAY & INTERSTITIAL
+# ==========================================
+optimizely.com
+vwo.com
+unbounce.com
+leadpages.co
+optinmonster.com
+sumo.com
+privy.com
+sleeknote.com
+justuno.com
+hellobar.com
+wisepops.com
+poptin.com
+
+# ==========================================
+# STREAMING SITE ADS
+# ==========================================
+streamtape.com/ads
+vidoza.net/ads
+doodstream.com/ads
+upstream.to/ads
+filemoon.sx/ads
+streamwish.to/ads
+voe.sx/ads
+mixdrop.co/ads
+fembed.com/ads
+mp4upload.com/ads
+streamlare.com/ads
+
+# ==========================================
+# REDIRECT & SHORTENERS
+# ==========================================
+adf.ly
+bc.vc
+ouo.io
+ouo.press
+shrinkme.io
+exe.io
+fc.lc
+gestyy.com
+za.gl
+linkshrink.net
+shorte.st
+sh.st
+adfoc.us
+j.gs
+q.gs
+ay.gy
+zo.ee
+linkbucks.com
+adcrun.ch
+adfro.in
+bit.do
+cutt.us
+shortur.com
+bc.vc
+
+# ==========================================
+# CRYPTO MINING
+# ==========================================
+coinhive.com
+coin-hive.com
+jsecoin.com
+crypto-loot.com
+cryptonight.wasm
+authedmine.com
+ppoi.org
+coinimp.com
+minero.cc
+cryptoloot.pro
+miner.pr0gramm.com
+webmine.cz
+
+# ==========================================
+# MALWARE & SUSPICIOUS
+# ==========================================
+malwaredomainlist.com
+malwaredomains.com
+zeus
+botnet
+trojan
+malware
+phishing
+suspicious
+
+# ==========================================
+# AD TECH INFRASTRUCTURE
+# ==========================================
+2mdn.net
+serving-sys.com
+rlcdn.com
+krxd.net
+bluekai.com
+exelator.com
+demdex.net
+adsafeprotected.com
+moatads.com
+doubleverify.com
+ias-ads.com
+greystripe.com
+nexac.com
+tribalfusion.com
+specificclick.net
+turn.com
+
+# ==========================================
+# NOTIFICATION SPAM
+# ==========================================
+pushcrewads.com
+pushnami.com
+pushly.com
+subscribers.com
+pushortify.com
+pushwoosh.com
+onesignal.com
+
+# ==========================================
+# BROWSER HIJACKERS
+# ==========================================
+adthis.one
+ad.admitad.com
+adbtc.top
+bitcoads.info
+trafficshop.com
+trafficbotpro.com

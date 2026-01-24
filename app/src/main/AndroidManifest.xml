@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Personal"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="31">
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Personal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".WebsiteListActivity"
+            android:theme="@style/Theme.Personal" />
+        
+        <activity 
+            android:name=".WebViewActivity"
+            android:theme="@style/Theme.Personal"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:hardwareAccelerated="true" />
+        
+        <activity 
+            android:name=".DownloadsActivity"
+            android:theme="@style/Theme.Personal"
+            android:exported="false" />
+        
+        <activity 
+            android:name=".VideoPlayerActivity"
+            android:theme="@style/Theme.Personal"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|smallestScreenSize|screenLayout"
+            android:supportsPictureInPicture="true"
+            android:hardwareAccelerated="true" />
+        
+        <activity 
+            android:name=".TeraBoxPlayerActivity"
+            android:theme="@style/Theme.Personal"
+            android:exported="true">
+            
+            <!-- Deep links for TeraBox URLs - app opens when clicking TeraBox links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
+                <!-- Official TeraBox domains -->
+                <data android:scheme="https" android:host="teraboxapp.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="www.teraboxapp.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terabox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="www.terabox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="1024terabox.com" android:pathPrefix="/s/" />
+                
+                <!-- TeraBox share link variants -->
+                <data android:scheme="https" android:host="teraboxlink.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terasharelink.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terasharefile.com" android:pathPrefix="/s/" />
+                
+                <!-- Free TeraBox variants -->
+                <data android:scheme="https" android:host="freeterabox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terabox.fun" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terabox.club" android:pathPrefix="/s/" />
+                
+                <!-- Dubox domains -->
+                <data android:scheme="https" android:host="dubox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="1024dubox.com" android:pathPrefix="/s/" />
+                
+                <!-- TeraBox mirror domains -->
+                <data android:scheme="https" android:host="terabox.tech" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terabox.co" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="terabox.me" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="mirrobox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="nephobox.com" android:pathPrefix="/s/" />
+                
+                <!-- Additional variants -->
+                <data android:scheme="https" android:host="momerybox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="teraboxshare.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="4funbox.com" android:pathPrefix="/s/" />
+                <data android:scheme="https" android:host="4funbox.co" android:pathPrefix="/s/" />
+            </intent-filter>
+            
+            <!-- Also support /sharing/link path pattern -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
+                <data android:scheme="https" android:host="teraboxapp.com" android:pathPrefix="/sharing/link" />
+                <data android:scheme="https" android:host="www.teraboxapp.com" android:pathPrefix="/sharing/link" />
+                <data android:scheme="https" android:host="terabox.com" android:pathPrefix="/sharing/link" />
+                <data android:scheme="https" android:host="www.terabox.com" android:pathPrefix="/sharing/link" />
+                <data android:scheme="https" android:host="1024terabox.com" android:pathPrefix="/sharing/link" />
+            </intent-filter>
+            
+            <!-- HTTP support (some older links) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
+                <data android:scheme="http" android:host="teraboxapp.com" android:pathPrefix="/s/" />
+                <data android:scheme="http" android:host="terabox.com" android:pathPrefix="/s/" />
+                <data android:scheme="http" android:host="terasharefile.com" android:pathPrefix="/s/" />
+            </intent-filter>
+        </activity>
+        
+        <!-- FileProvider for sharing downloaded files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+            
+    </application>
+
+</manifest>
